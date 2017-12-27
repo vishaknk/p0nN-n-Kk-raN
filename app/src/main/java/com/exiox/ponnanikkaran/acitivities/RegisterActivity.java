@@ -20,7 +20,6 @@ import com.exiox.ponnanikkaran.base.BaseActivity;
 
 
 public class RegisterActivity extends BaseActivity {
-
     //member variables
     public ViewPager mVpRegister;
     private ViewPagerAdapter mPagerAdapter;
