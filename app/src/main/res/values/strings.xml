@@ -6,4 +6,9 @@
     <string name="et_hint_email">Email</string>
     <string name="tv_sign_in">Sign In</string>
     <string name="tv_heading_email_verification">Verfy</string>
+    <string name="et_hint_firstname">First Name</string>
+    <string name="tv_sign_up">Sign Up</string>
+    <string name="et_hint_lastName">Last Name</string>
+    <string name="btn_join">Join</string>
+    <string name="tv_slide_to_login">Slide to Join</string>
 </resources>

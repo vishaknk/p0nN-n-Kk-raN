@@ -25,40 +25,20 @@
             android:layout_height="match_parent">
 
 
-            <!--top tri color bar-->
-
-            <LinearLayout
-                android:id="@+id/ll_topBar"
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-
-                <LinearLayout
-                    android:background="@color/envoyOrange"
-                    style="@style/EnvoyLinearLayoutTopBarOrange"/>
-
-                <LinearLayout
-                    android:background="@color/envoyGrey"
-                    style="@style/EnvoyLinearLayoutTopBarGrey" />
-
-                <LinearLayout
-                    android:background="@color/envoyBlue"
-                    style="@style/EnvoyLinearLayoutTopBarBlue" />
-
-            </LinearLayout>
 
             <!--title area with grey background-->
 
             <RelativeLayout
-                android:id="@+id/rl_title"
-                style="@style/EnvoyRelativeLayoutTitle"
-                android:layout_below="@+id/ll_topBar">
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/rl_title">
 
                 <ImageView
                     android:id="@+id/iv_logo"
-                    style="@style/EnvoyImageVIewTitle"/>
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
 
                 <ProgressBar
                     android:id="@+id/pb_progressSignUp"
@@ -76,7 +56,9 @@
 
             <TextView
                 android:id="@+id/tv_signUp"
-                style="@style/EnvoyTextViewSignUp"
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_below="@+id/rl_title"
                 android:text="@string/tv_sign_up"/>
             <android.support.design.widget.TextInputLayout
@@ -86,12 +68,12 @@
                 android:layout_below="@+id/tv_signUp">
 
                 <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:id="@+id/et_firstName"
-                    style="@style/EnvoyEditTextRegularGrey"
                     android:layout_below="@+id/tv_signUp"
                     android:hint="@string/et_hint_firstname"
                     android:maxLength="50"
-                    android:textColor="@color/envoyGrey"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                     android:inputType="textCapSentences|textPersonName"/>
             </android.support.design.widget.TextInputLayout>
@@ -104,11 +86,12 @@
 
                 <EditText
                     android:id="@+id/et_lastName"
-                    style="@style/EnvoyEditTextRegularGrey"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_below="@+id/et_firstName"
                     android:hint="@string/et_hint_lastName"
                     android:maxLength="50"
-                    android:textColor="@color/envoyGrey"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                     android:inputType="textCapSentences"/>
             </android.support.design.widget.TextInputLayout>
@@ -120,11 +103,12 @@
                 android:layout_below="@+id/input_layout_lastname">
                 <EditText
                     android:id="@+id/et_email"
-                    style="@style/EnvoyEditTextRegularGrey"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_below="@+id/et_lastName"
                     android:hint="@string/et_hint_email"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/envoyGrey" />
+                    android:inputType="textEmailAddress"/>
             </android.support.design.widget.TextInputLayout>
 
             <RelativeLayout
@@ -140,20 +124,19 @@
                     android:layout_alignParentStart="true">
                     <EditText
                         android:id="@+id/et_password"
-                        style="@style/EnvoyEditTextRegularGrey"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
                         android:hint="@string/et_hint_password"
                         android:inputType="textPassword"
                         android:password="true"
-                        android:textStyle="normal"
-                        android:textColor="@color/envoyGrey"
-                        android:drawableRight="@drawable/info_login"/>
+                        android:textStyle="normal"/>
                 </android.support.design.widget.TextInputLayout>
                 <!--error msg for pswrd-->
                 <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:id="@+id/tv_pswrd_valid"
-                    android:text="@string/pswrd_msg"
                     android:visibility="gone"
-                    style="@style/EnvoytextviewPaswrdValid"
                     android:layout_below="@id/input_layout_password"/>
             </RelativeLayout>
 
@@ -187,7 +170,8 @@
             </RelativeLayout>
             <Button
                 android:id="@+id/btn_join"
-                style="@style/EnvoyButtonOrangeRegister"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/rl_checkBoxContainer"
@@ -195,7 +179,9 @@
                 android:text="@string/btn_join"/>
 
             <TextView
-                style="@style/EnvoyTextViewNormalBlue"
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_below="@+id/btn_join"
                 android:layout_centerHorizontal="true"
@@ -212,9 +198,9 @@
 
         <TextView
             android:id="@+id/tv_bottomBar"
-            style="@style/EnvoyTextViewSmallGrey"
-            android:textColor="@color/greyTextBottomBar"
-            android:text="@string/tv_bottombar"
+
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:gravity="center"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
