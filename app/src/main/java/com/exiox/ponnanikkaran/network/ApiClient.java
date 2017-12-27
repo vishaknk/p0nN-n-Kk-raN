@@ -8,7 +8,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = "asd";
+    public static final String BASE_URL = "http://www.exioxtechnologies.com/ponnani/api/v1/index.php/";
     public static final int TIME_OUT_CONNECT = 30;// SEC
     public static final int TIME_OUT_READ = 30; // SEC
 

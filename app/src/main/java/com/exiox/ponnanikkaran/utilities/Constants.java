@@ -27,4 +27,9 @@ public class Constants {
     public static final String BALANCE = "balance";
     public static final String DEFAULT_SHARED_PREF = "shared_pref";
     public static final String LOGIN_SUCCES = "login_success";
+
+    public static final String FIRST_NAME = "first_name";
+    public static final String LAST_NAME = "last_name";
+    public static final String PASSWORD = "password";
+    public static final String USERNAME = "user_name";
 }

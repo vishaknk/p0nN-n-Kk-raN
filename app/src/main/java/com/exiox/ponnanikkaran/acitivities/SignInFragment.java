@@ -46,7 +46,6 @@ public class SignInFragment extends Fragment implements RegisterInterface {
 
     public static Fragment newInstance(Context context) {
         SignInFragment fragment = new SignInFragment();
-
         return fragment;
     }
 
@@ -65,6 +64,21 @@ public class SignInFragment extends Fragment implements RegisterInterface {
         mOverlayDialog = new Dialog(mContext, android.R.style.Theme_Panel);
         mOverlayDialog.setCancelable(false);
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callSigninApi();
+            }
+        });
+    }
+
+    private void callSigninApi() {
+
     }
 
     @Override

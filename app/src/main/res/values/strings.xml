@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Ponnanikkaran</string>
-    <string name="cb_agree">I agree</string>
     <string name="btn_login">Login</string>
     <string name="et_hint_password">Password</string>
     <string name="et_hint_email">Email</string>
@@ -12,4 +11,15 @@
     <string name="btn_join">Join</string>
     <string name="tv_slide_to_login">Slide to Join</string>
     <string name="slide_to_join"><![CDATA[<Slide to Join]]></string>
+    <string name="cb_agree">I have read and agree to the</string>
+    <string name="cb_agree_blue_text">I have read and agree to the</string>
+    <string name="msg_firstname_empty">Please enter your first name</string>
+    <string name="msg_firstname_length">Your first name must be between 1 and 50 characters</string>
+    <string name="msg_lastname_empty">Please enter your last name</string>
+    <string name="msg_lastname_firstname_empty">Please enter your first name/last name</string>
+    <string name="msg_lastname_length">Your last name must be between 1 and 50 characters</string>
+    <string name="msg_email_empty">Please enter a valid email address</string>
+    <string name="msg_email_invalid">Please enter a valid email address</string>
+
+
 </resources>
