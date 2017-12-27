@@ -1,0 +1,34 @@
+<!--
+* Description : Register activity
+* Author      : Nibin Salim
+* Date        : 07/10/2015
+* Reviewed by :
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+    <!--view pager where sign in and sign up page loads-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_bottomBar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_bottomBar"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
+

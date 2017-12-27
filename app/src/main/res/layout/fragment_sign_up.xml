@@ -1,0 +1,222 @@
+<!--
+* Description : Sign up page
+* Author      : Nibin Salim
+* Date        : 06/09/2015
+* Reviewed by :
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:isScrollContainer="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!--top tri color bar-->
+
+            <LinearLayout
+                android:id="@+id/ll_topBar"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <LinearLayout
+                    android:background="@color/envoyOrange"
+                    style="@style/EnvoyLinearLayoutTopBarOrange"/>
+
+                <LinearLayout
+                    android:background="@color/envoyGrey"
+                    style="@style/EnvoyLinearLayoutTopBarGrey" />
+
+                <LinearLayout
+                    android:background="@color/envoyBlue"
+                    style="@style/EnvoyLinearLayoutTopBarBlue" />
+
+            </LinearLayout>
+
+            <!--title area with grey background-->
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                style="@style/EnvoyRelativeLayoutTitle"
+                android:layout_below="@+id/ll_topBar">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    style="@style/EnvoyImageVIewTitle"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_progressSignUp"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminate="false"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <!--edittext area for entering user details-->
+
+            <TextView
+                android:id="@+id/tv_signUp"
+                style="@style/EnvoyTextViewSignUp"
+                android:layout_below="@+id/rl_title"
+                android:text="@string/tv_sign_up"/>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_signUp">
+
+                <EditText
+                    android:id="@+id/et_firstName"
+                    style="@style/EnvoyEditTextRegularGrey"
+                    android:layout_below="@+id/tv_signUp"
+                    android:hint="@string/et_hint_firstname"
+                    android:maxLength="50"
+                    android:textColor="@color/envoyGrey"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                    android:inputType="textCapSentences|textPersonName"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_firstname">
+
+                <EditText
+                    android:id="@+id/et_lastName"
+                    style="@style/EnvoyEditTextRegularGrey"
+                    android:layout_below="@+id/et_firstName"
+                    android:hint="@string/et_hint_lastName"
+                    android:maxLength="50"
+                    android:textColor="@color/envoyGrey"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                    android:inputType="textCapSentences"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_lastname">
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/EnvoyEditTextRegularGrey"
+                    android:layout_below="@+id/et_lastName"
+                    android:hint="@string/et_hint_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/envoyGrey" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_pswrd_container"
+                android:layout_below="@+id/input_layout_email">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                    <EditText
+                        android:id="@+id/et_password"
+                        style="@style/EnvoyEditTextRegularGrey"
+                        android:hint="@string/et_hint_password"
+                        android:inputType="textPassword"
+                        android:password="true"
+                        android:textStyle="normal"
+                        android:textColor="@color/envoyGrey"
+                        android:drawableRight="@drawable/info_login"/>
+                </android.support.design.widget.TextInputLayout>
+                <!--error msg for pswrd-->
+                <TextView
+                    android:id="@+id/tv_pswrd_valid"
+                    android:text="@string/pswrd_msg"
+                    android:visibility="gone"
+                    style="@style/EnvoytextviewPaswrdValid"
+                    android:layout_below="@id/input_layout_password"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_checkBoxContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_pswrd_container"
+                android:layout_alignLeft="@+id/btn_join"
+                android:layout_alignStart="@+id/btn_join"
+                android:layout_alignRight="@+id/btn_join"
+                android:layout_alignEnd="@+id/btn_join">
+
+
+            <CheckBox
+                android:id="@+id/cb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+
+                <TextView
+                    android:id="@+id/tv_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/cb_agree"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_join"
+                style="@style/EnvoyButtonOrangeRegister"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rl_checkBoxContainer"
+                android:layout_marginTop="15dp"
+                android:text="@string/btn_join"/>
+
+            <TextView
+                style="@style/EnvoyTextViewNormalBlue"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/btn_join"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/tv_slide_to_login"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_bottomBar"
+            style="@style/EnvoyTextViewSmallGrey"
+            android:textColor="@color/greyTextBottomBar"
+            android:text="@string/tv_bottombar"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
