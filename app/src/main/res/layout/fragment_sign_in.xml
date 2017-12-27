@@ -44,33 +44,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="30dp"
                         android:layout_gravity="center_horizontal"
-                        android:visibility="invisible">
-
-
-                        <TextView
-                            android:id="@+id/tv_verificationHeading"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:gravity="center"
-                            android:layout_marginTop="30dp"
-                            android:text="@string/tv_heading_email_verification"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-
-
-                        <TextView
-                            android:id="@+id/tv_emailAddress"
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textSize="14sp"
-                            android:layout_marginTop="5dp"
-                            android:layout_below="@+id/tv_verificationHeading"
-                            android:layout_centerHorizontal="true" />
-
+                        android:visibility="visible">
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -80,13 +54,14 @@
                         android:layout_gravity="center_horizontal"
                         android:paddingBottom="40dp"
                         android:paddingTop="40dp"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <ImageView
                             android:id="@+id/iv_logo"
                             android:src="@mipmap/ic_launcher"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"/>
 
                     </RelativeLayout>
 
@@ -100,6 +75,10 @@
                 android:id="@+id/tv_signIn"
                 android:layout_below="@+id/rl_title"
                 android:text="@string/tv_sign_in"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
                 android:layout_gravity="center_horizontal" />
 
             <!--edittext area for entering user details-->
@@ -113,7 +92,19 @@
                     android:id="@+id/et_email"
                     android:layout_below="@+id/tv_signIn"
                     android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
                     android:hint="@string/et_hint_email"
+                    android:gravity="left"
+                    android:background="@drawable/signin_edittext"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
                     android:inputType="textEmailAddress"/>
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
@@ -126,6 +117,18 @@
                     android:id="@+id/et_password"
                     android:layout_below="@+id/et_email"
                     android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left"
+                    android:background="@drawable/signin_edittext"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
                     android:hint="@string/et_hint_password"
                     android:inputType="textPassword"
                     android:password="true"/>
@@ -135,11 +138,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_signIn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:background="@drawable/signin_btn"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/cb_agree"
                 android:layout_marginTop="15dp"
                 android:text="@string/btn_login"
+                android:textColor="@color/white"
                 android:textAllCaps="false"/>
 
             <TextView
@@ -151,7 +167,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:clickable="true"
-                android:text="forgot password"/>
+                android:text="forgot password"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -160,7 +179,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="slide to join"/>
+                android:text=">Slide to Join"
+                android:gravity="center"
+                android:textSize="16sp"/>
 
         </LinearLayout>
     </ScrollView>
@@ -175,21 +196,6 @@
         android:visibility="invisible"
         android:layout_alignBottom="@+id/scrollView"
         android:layout_centerHorizontal="true" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_bottomBar"
-            android:text="bootom "
-            android:gravity="center"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
 
 </LinearLayout>
 

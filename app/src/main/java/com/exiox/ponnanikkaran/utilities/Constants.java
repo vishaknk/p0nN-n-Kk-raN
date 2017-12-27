@@ -25,4 +25,6 @@ public class Constants {
     public static final String IS_EDIT = "is_edit";
     public static final String CUSTOMER_ID = "customer_id";
     public static final String BALANCE = "balance";
+    public static final String DEFAULT_SHARED_PREF = "shared_pref";
+    public static final String LOGIN_SUCCES = "login_success";
 }

@@ -1,6 +1,5 @@
 package com.exiox.ponnanikkaran.network;
 
-import info.vnk.billex.BuildConfig;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -9,7 +8,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = BuildConfig.BASE_URL;
+    public static final String BASE_URL = "asd";
     public static final int TIME_OUT_CONNECT = 30;// SEC
     public static final int TIME_OUT_READ = 30; // SEC
 

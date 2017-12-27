@@ -9,6 +9,7 @@ package com.exiox.ponnanikkaran.acitivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,7 @@ import android.support.v4.view.ViewPager;
 
 import com.exiox.ponnanikkaran.R;
 import com.exiox.ponnanikkaran.base.BaseActivity;
+import com.exiox.ponnanikkaran.utilities.Constants;
 
 
 public class RegisterActivity extends BaseActivity {
@@ -38,15 +40,15 @@ public class RegisterActivity extends BaseActivity {
 
         super.onCreate(savedInstanceState);
 
-//        SharedPreferences sharedPref = getSharedPreferences(EnvoyConstants.ENVOY_DEFAULT_SHARED_PREF, Context.MODE_PRIVATE);
-//        boolean loginStatus = sharedPref.getBoolean(EnvoyConstants.LOGININ_SUCCESS, false);
+        SharedPreferences sharedPref = getSharedPreferences(Constants.DEFAULT_SHARED_PREF, Context.MODE_PRIVATE);
+        boolean loginStatus = sharedPref.getBoolean(Constants.LOGIN_SUCCES, false);
         //checks whether the sign in success or not and based on that redirect the user to home activity
-//        if (loginStatus == true) {
+        if (loginStatus == true) {
             Intent homeIntent = new Intent(RegisterActivity.this, SplashScreenActivity.class);
             startActivity(homeIntent);
             finish();
 
-//        }
+        }
 
         setContentView(R.layout.activity_register);
 

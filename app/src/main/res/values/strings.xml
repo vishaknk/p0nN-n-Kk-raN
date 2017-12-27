@@ -11,4 +11,5 @@
     <string name="et_hint_lastName">Last Name</string>
     <string name="btn_join">Join</string>
     <string name="tv_slide_to_login">Slide to Join</string>
+    <string name="slide_to_join"><![CDATA[<Slide to Join]]></string>
 </resources>

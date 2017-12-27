@@ -32,7 +32,6 @@ public class SignInFragment extends Fragment implements RegisterInterface {
     private EditText mEmail;
     private EditText mPassword;
     private Button mSignIn;
-    private TextView mEmailAddress;
     private TextView mForgotOrResend;
     private RelativeLayout mVerificationLayout;
     private RelativeLayout mSignInTitleLayout;
@@ -59,7 +58,6 @@ public class SignInFragment extends Fragment implements RegisterInterface {
         mEmail = (EditText) rootView.findViewById(R.id.et_email);
         mPassword = (EditText) rootView.findViewById(R.id.et_password);
         mSignIn = (Button) rootView.findViewById(R.id.btn_signIn);
-        mEmailAddress = (TextView) rootView.findViewById(R.id.tv_emailAddress);
         mVerificationLayout = (RelativeLayout) rootView.findViewById(R.id.rl_blueBackground);
         mSignInTitleLayout = (RelativeLayout) rootView.findViewById(R.id.rl_signInTitle);
         mForgotOrResend = (TextView) rootView.findViewById(R.id.tv_forgotPassword);
