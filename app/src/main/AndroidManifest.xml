@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name=".acitivities.SplashScreenActivity"/>
+        <activity android:name=".acitivities.FeedActivity"/>
     </application>
 
 </manifest>

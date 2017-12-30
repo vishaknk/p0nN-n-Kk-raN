@@ -10,6 +10,8 @@ package com.exiox.ponnanikkaran.acitivities;
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,10 +22,22 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.exiox.ponnanikkaran.R;
+import com.exiox.ponnanikkaran.model.Sigin.SignInResultModel;
+import com.exiox.ponnanikkaran.model.Sigin.SigninResult;
+import com.exiox.ponnanikkaran.network.ApiClient;
+import com.exiox.ponnanikkaran.network.ApiInterface;
+import com.exiox.ponnanikkaran.utilities.Constants;
 
 import org.json.JSONObject;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SignInFragment extends Fragment implements RegisterInterface {
 
@@ -72,12 +86,36 @@ public class SignInFragment extends Fragment implements RegisterInterface {
         mSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                callSigninApi();
+                callSigninApi(mEmail.getText().toString().trim(), mPassword.getText().toString().trim());
             }
         });
     }
 
-    private void callSigninApi() {
+    private void callSigninApi(String email, String password) {
+        SharedPreferences sharedPref = mContext.getSharedPreferences(Constants.DEFAULT_SHARED_PREF, Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPref.edit();
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<SigninResult> call = apiService.signin(email, password);
+        call.enqueue(new Callback<SigninResult>() {
+            @Override
+            public void onResponse(Call<SigninResult> call, Response<SigninResult> response) {
+                List<SignInResultModel> signInResult = response.body().getResult();
+                editor.putBoolean(Constants.LOGIN_SUCCES,true).apply();
+                editor.putString(Constants.SESSION,signInResult.get(0).getSessionId()).apply();
+                editor.putInt(Constants.USER_ID,signInResult.get(0).getUserId()).apply();
+                Toast.makeText(mContext, "Success", Toast.LENGTH_LONG);
+                mProgressBar.setVisibility(View.INVISIBLE);
+                Intent homeIntent = new Intent(mContext, SplashScreenActivity.class);
+                startActivity(homeIntent);
+                getActivity().finish();
+            }
+
+            @Override
+            public void onFailure(Call<SigninResult> call, Throwable t) {
+                Toast.makeText(mContext, "error"+t.getLocalizedMessage(), Toast.LENGTH_LONG);
+                mProgressBar.setVisibility(View.INVISIBLE);
+            }
+        });
 
     }
 

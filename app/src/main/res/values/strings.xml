@@ -21,5 +21,14 @@
     <string name="msg_email_empty">Please enter a valid email address</string>
     <string name="msg_email_invalid">Please enter a valid email address</string>
 
+    <!--Time ago-->
+    <string name="just_now">Just now</string>
+    <string name="ago">ago</string>
+    <string name="year">year</string>
+    <string name="month">month</string>
+    <string name="day">day</string>
+    <string name="hour">hr</string>
+    <string name="min">min</string>
+
 
 </resources>

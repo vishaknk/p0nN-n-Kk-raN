@@ -1,35 +1,24 @@
-package com.exiox.ponnanikkaran.model;
+package com.exiox.ponnanikkaran.model.posts;
 
-import com.exiox.ponnanikkaran.model.signUp.SignUpModel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 /**
- * Created by priyesh on 27/12/17.
+ * Created by priyesh on 30/12/17.
  */
 @JsonIgnoreProperties( ignoreUnknown = true )
-public class ResultModel {
+public class PostResult {
+
     @JsonProperty("result")
-    private List<SignUpModel> loginResult;
-
-    private List<SignUpModel> results;
-
+    private List<PostsResultsModel> result;
 
     @JsonProperty("message")
     private String message;
 
     @JsonProperty("status")
     private int status;
-
-    public List<SignUpModel> getLoginResults() {
-        return loginResult;
-    }
-
-    public void setLoginResult(List<SignUpModel> result) {
-        this.loginResult = result;
-    }
 
     public String getMessage() {
         return message;
@@ -46,5 +35,12 @@ public class ResultModel {
     public void setStatus(int status) {
         this.status = status;
     }
-}
 
+    public List<PostsResultsModel> getResult() {
+        return result;
+    }
+
+    public void setResult(List<PostsResultsModel> result) {
+        this.result = result;
+    }
+}

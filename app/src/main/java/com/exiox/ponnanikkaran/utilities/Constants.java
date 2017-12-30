@@ -10,6 +10,7 @@ public class Constants {
     public static final String DOD = "date_of_delivery";
     public static final String DOO = "date_of_order";
     public static final String CUSTOMER_NAME = "customer_name";
+    public static final String IMAGE_PATH = "http://www.exioxtechnologies.com/ponnani/";
     //Shared Preference for login
     public static String sp_login = "loginDetails";
 
@@ -21,12 +22,13 @@ public class Constants {
     public static String EMAIL_ID = "email";
     public static String MOBILE = "mobile";
     public static String mSession = "session_id";
-    public static String mUserId = "user_id";
+    public static String USER_ID = "user_id";
     public static final String IS_EDIT = "is_edit";
     public static final String CUSTOMER_ID = "customer_id";
     public static final String BALANCE = "balance";
     public static final String DEFAULT_SHARED_PREF = "shared_pref";
     public static final String LOGIN_SUCCES = "login_success";
+    public static final String SESSION = "session";
 
     public static final String FIRST_NAME = "first_name";
     public static final String LAST_NAME = "last_name";

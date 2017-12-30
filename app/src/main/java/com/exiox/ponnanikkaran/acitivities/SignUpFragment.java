@@ -27,8 +27,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.exiox.ponnanikkaran.R;
-import com.exiox.ponnanikkaran.model.SignUpModel;
-import com.exiox.ponnanikkaran.model.SignUpResultModel;
+import com.exiox.ponnanikkaran.model.signUp.SignUpModel;
+import com.exiox.ponnanikkaran.model.signUp.SignUpResultModel;
 import com.exiox.ponnanikkaran.network.ApiClient;
 import com.exiox.ponnanikkaran.network.ApiInterface;
 import com.exiox.ponnanikkaran.utilities.Constants;

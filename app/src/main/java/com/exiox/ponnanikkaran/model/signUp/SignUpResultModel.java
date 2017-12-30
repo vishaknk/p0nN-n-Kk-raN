@@ -1,4 +1,4 @@
-package com.exiox.ponnanikkaran.model;
+package com.exiox.ponnanikkaran.model.signUp;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
